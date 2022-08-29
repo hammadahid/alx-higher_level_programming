@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def replace_in_list(my_list, idx, element):
-    lenght_array = len(my_list)
-    if idx <= lenght_array and idx != 0:
-        my_list[idx] = element
+    """ replaces an element of a list at a specific position"""
+    if len(my_list) <= idx or idx < 0:
+        return my_list
+    my_list[idx] = element
     return my_list
