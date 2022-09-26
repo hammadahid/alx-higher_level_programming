@@ -1,18 +1,22 @@
 #!/usr/bin/python3
 """
-Inheritance class
+   1-my_list module
+   Class MyList that inherits from list that contain \
+   Public instance method: def print_sorted(self): that \
+   prints the list, but sorted (ascending sort)
 """
 
+
 class MyList(list):
-    """
-    priints the list but
-    sorted
+    """ Class that inherits the attributes references of class list
+
     Args:
-    self: the object
+        list: class list
+
     """
+
     def print_sorted(self):
-        new_list = []
-        for i in self:
-            new_list.append(i)
-        print(sorted(new_list))
-        
+        """ Method that prints the sorted list """
+        l_sorted = self.copy()
+        l_sorted.sort()
+        print(l_sorted)
